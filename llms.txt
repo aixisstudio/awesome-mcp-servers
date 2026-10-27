@@ -34,4 +34,16 @@ Maintained by aixisstudio. Related: Snitch (open-source app firewall). https://g
 ### Content
 - Newsletter-in-a-box (curation + draft + SEO check)
 - Podcast → all formats (clips, transcript, blog, tweets)
-- Multilin
+- Multilingual docs keeping translations in sync
+- SEO content for long-tail programmatic pages
+
+### Niche & fun
+- D&D campaign co-DM with memory
+- Personal finance coach on bank exports (local-first!)
+- Plant disease detector from photos
+- Second-brain search over *your* messages/files (private)
+
+## ⚡ The pattern that works
+1. Pick a niche you can reach
+2. One painful repetitive task
+3. AI does 80%, human 
