@@ -53,6 +53,22 @@ _詳細なコンテンツ（リスト・リンク・説明）は保守のため�
 3. AI does 80%, human approves 20%
 4. Charge for the workflow, not the tokens
 
+## 💰 Niches with proven demand
+
+| Idea | Model |
+|---|---|
+| Vertical AI assistant (legal, dental, trades) | SaaS $50-200/mo |
+| AI content pipeline for agencies | Retainer |
+| RAG over company docs | Implementation projects |
+| AI receptionist/phone agent | Per-minute pricing |
+| Niche fine-tuning service | Project fees |
+
+## 🧪 Validation before building
+
+1. 10 customer interviews — do they *already* pay for a workaround?
+2. Landing page + $200 ads — measure signup intent
+3. Manual-first: sell the service, automate behind the scenes
+
 ---
 ## 貢献
 
