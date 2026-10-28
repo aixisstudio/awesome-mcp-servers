@@ -1,73 +1,89 @@
-# Ai Business Ideas
+# Awesome Mcp Servers
 
 [English](README.md) | [Français](README.fr.md) | **Español** | [中文](README.zh-CN.md) | [日本語](README.ja.md) | [Русский](README.ru.md)
 
-100 ideas de negocio con IA
+Servidores MCP — directorio de herramientas
 
 _El contenido detallado (listas, enlaces, descripciones) está en inglés por mantenibilidad — las secciones siguientes te guían._
 
-## 💡 100 buildable AI ideas — picked highlights
+## 🔌 What is MCP?
 
-### SaaS micro-tools
-- AI contract reviewer for freelancers
-- Meeting-notes → structured CRM entries
-- Reddit/Twitter listening → weekly founder digest
-- AI accessibility checker for websites
-- Niche RAG: "ChatGPT for {industry} docs"
-- Real-estate listing writer from photos
-- Support-ticket triage + auto-reply drafts
-- Invoice extraction → accounting exports
-- AI-powered resume tailoring per job posting
-- Legacy-code translator (COBOL→modern, 90s PHP→Laravel…)
+**Model Context Protocol** (Anthropic, open standard) — the USB-C of AI tooling: one protocol that lets any LLM client talk to any tool/data source. A MCP server exposes **tools**, **resources**, and **prompts**; the client (Claude Desktop, Cursor, your agent) calls them.
 
-### Vertical plays
-- Dental/vet clinic: AI receptionist + triage
-- Trades (plumbers, electricians): quote-from-photo
-- Restaurants: allergen-aware menu engine + multilingual
-- Local gov: citizen-doc Q&A over official PDFs
-- Logistics: customs-paperwork automation
-- Legal: jurisdiction-specific document assembly
+## 📂 Server directory
 
-### Dev tools
-- AI changelog generator from merged PRs
-- Test-data generator preserving schema+stats
-- PR reviewer tuned on the team's style guide
-- Onboarding bot trained on the repo + wiki
-- Infra: anomaly-aware alert noise reduction
-
-### Content
-- Newsletter-in-a-box (curation + draft + SEO check)
-- Podcast → all formats (clips, transcript, blog, tweets)
-- Multilingual docs keeping translations in sync
-- SEO content for long-tail programmatic pages
-
-### Niche & fun
-- D&D campaign co-DM with memory
-- Personal finance coach on bank exports (local-first!)
-- Plant disease detector from photos
-- Second-brain search over *your* messages/files (private)
-
-## ⚡ The pattern that works
-1. Pick a niche you can reach
-2. One painful repetitive task
-3. AI does 80%, human approves 20%
-4. Charge for the workflow, not the tokens
-
-## 💰 Niches with proven demand
-
-| Idea | Model |
+### 🗄️ Data & Databases
+| Server | What it connects |
 |---|---|
-| Vertical AI assistant (legal, dental, trades) | SaaS $50-200/mo |
-| AI content pipeline for agencies | Retainer |
-| RAG over company docs | Implementation projects |
-| AI receptionist/phone agent | Per-minute pricing |
-| Niche fine-tuning service | Project fees |
+| `postgres` | Query + inspect PostgreSQL |
+| `sqlite` | Local SQLite access |
+| `redis` | Key-value ops |
+| `clickhouse` | Analytics queries |
+| `snowflake` | Warehouse queries |
 
-## 🧪 Validation before building
+### 🌐 Web & Browsing
+| Server | What it connects |
+|---|---|
+| `playwright` | Full browser control |
+| `puppeteer` | Headless browser |
+| `fetch` | HTTP requests |
+| `brave-search` | Web search |
+| `firecrawl` | Scrape → clean markdown |
 
-1. 10 customer interviews — do they *already* pay for a workaround?
-2. Landing page + $200 ads — measure signup intent
-3. Manual-first: sell the service, automate behind the scenes
+### 🗂️ Files & System
+| Server | What it connects |
+|---|---|
+| `filesystem` | Scoped file access |
+| `git` | Repo operations |
+| `shell` | Command execution (careful!) |
+| `docker` | Container management |
+
+### 🧰 Dev Platforms
+| Server | What it connects |
+|---|---|
+| `github` | Issues, PRs, repos |
+| `gitlab` | Same for GitLab |
+| `linear` | Issue tracking |
+| `sentry` | Error monitoring |
+| `aws` | Cloud resources |
+
+### 📅 Productivity
+| Server | What it connects |
+|---|---|
+| `slack` | Messages, channels |
+| `notion` | Docs & databases |
+| `google-drive` | Files |
+| `google-calendar` | Events |
+| `todoist` | Tasks |
+
+### 🧠 Memory & Knowledge
+| Server | What it connects |
+|---|---|
+| `memory` | Persistent knowledge graph |
+| `qdrant` | Vector search |
+| `chroma` | Local embeddings store |
+
+## 🛠️ Write your own (10 lines)
+
+```python
+# python-sdk example
+from mcp.server.fastmcp import FastMCP
+mcp = FastMCP("my-server")
+
+@mcp.tool()
+def hello(name: str) -> str:
+    return f"Hello {name}"
+
+mcp.run()
+```
+
+Register in Claude Desktop: `claude_desktop_config.json` → `mcpServers`.
+
+## 🔐 Security notes
+
+- MCP servers run **local code** — audit before installing
+- Prefer scoped filesystem access over `/`
+- Tool descriptions are prompt-injectable — treat server output as untrusted
 
 ---
 ## Contribuir
