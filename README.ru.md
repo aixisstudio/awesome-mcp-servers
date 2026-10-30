@@ -1,89 +1,71 @@
-# Awesome Mcp Servers
+# Ai Business Ideas
 
 [English](README.md) | [Français](README.fr.md) | [Español](README.es.md) | [中文](README.zh-CN.md) | [日本語](README.ja.md) | **Русский**
 
-Каталог MCP-серверов
+100 реально реализуемых ИИ-бизнес-идей
 
-_Подробное содержимое (списки, ссылки, описания) ведётся на английском — разделы ниже помогут сориентироваться._
+##   100 идей искусственного интеллекта — избранные основные моменты
 
-## 🔌 What is MCP?
+### Микроинструменты SaaS
+- Рецензент контрактов AI для фрилансеров
+- Meeting-notes → структурированные записи CRM
+- Прослушивание Reddit/Twitter еженедельно
+Проверка доступности AI для веб-сайтов
+- Niche RAG: "ChatGPT for {industry} docs"
+Автор списка недвижимости с фотографий
+- Сортировка билетов поддержки + автоответчики
+- Добыча счетов → Бухгалтерский экспорт
+- Пошив резюме на основе искусственного интеллекта для публикации вакансий
+Переводчик кода наследия (COBOL→modern, 90-е PHP→Laravel...)
 
-**Model Context Protocol** (Anthropic, open standard) — the USB-C of AI tooling: one protocol that lets any LLM client talk to any tool/data source. A MCP server exposes **tools**, **resources**, and **prompts**; the client (Claude Desktop, Cursor, your agent) calls them.
+### Вертикальные игры
+- Стоматологическая / ветеринарная клиника: администратор AI + сортировка
+- Торговля (памперсы, электрики): цитата из фото
+Рестораны: движок меню с аллергеном + многоязычный
+- Местное правительство: гражданский-док Q&A над официальными PDF-файлами
+- Логистика: автоматизация таможенных работ
+- Правовая: сборка документов, относящихся к конкретной юрисдикции
 
-## 📂 Server directory
+###Инструменты
+Генератор изменений ИИ от объединенных PR
+- Генератор тестовых данных, сохраняющий схему+статы
+PR-рецензент настроен на руководство по стилю команды
+- Бортовой бот, обученный на репо + вики
+- Infra: аномально-осознанное снижение шума
 
-### 🗄️ Data & Databases
-| Server | What it connects |
+###Содержание
+- Бюллетень в коробке (курация + черновик + проверка SEO)
+Подкаст → все форматы (клипы, транскрипт, блог, твиты)
+Многоязычные документы, сохраняющие переводы синхронно
+SEO-контент для программных страниц с длинным хвостом
+
+### Ниша и веселье
+D&D кампания co-DM с памятью
+Тренер по личным финансам по банковскому экспорту (сначала местный!)
+Детектор болезней растений на фотографиях
+- Поиск второго мозга по *вашим * сообщениям / файлам (частным)
+
+###Фильм, который работает
+1.Выберите нишу, которую вы можете достичь
+2. одна болезненная повторяющаяся задача
+3. ИИ делает 80%, человек одобряет 20%
+4. Зарядка рабочего процесса, а не токенов
+
+## Ниши с доказанным спросом
+
+Идея, модель.
 |---|---|
-| `postgres` | Query + inspect PostgreSQL |
-| `sqlite` | Local SQLite access |
-| `redis` | Key-value ops |
-| `clickhouse` | Analytics queries |
-| `snowflake` | Warehouse queries |
+Вертикальный помощник ИИ (юридический, стоматологический, трейдинг) | SaaS $50-200/mo
+Главная → Архив новостей → Retainer →
+| RAG над документами компании | Проекты реализации |
+| Ресепшн/телефонный агент | Цена за минуту |
+Услуги по настройке ниши | Стоимость проекта |
 
-### 🌐 Web & Browsing
-| Server | What it connects |
-|---|---|
-| `playwright` | Full browser control |
-| `puppeteer` | Headless browser |
-| `fetch` | HTTP requests |
-| `brave-search` | Web search |
-| `firecrawl` | Scrape → clean markdown |
+##Валидация перед строительством
 
-### 🗂️ Files & System
-| Server | What it connects |
-|---|---|
-| `filesystem` | Scoped file access |
-| `git` | Repo operations |
-| `shell` | Command execution (careful!) |
-| `docker` | Container management |
-
-### 🧰 Dev Platforms
-| Server | What it connects |
-|---|---|
-| `github` | Issues, PRs, repos |
-| `gitlab` | Same for GitLab |
-| `linear` | Issue tracking |
-| `sentry` | Error monitoring |
-| `aws` | Cloud resources |
-
-### 📅 Productivity
-| Server | What it connects |
-|---|---|
-| `slack` | Messages, channels |
-| `notion` | Docs & databases |
-| `google-drive` | Files |
-| `google-calendar` | Events |
-| `todoist` | Tasks |
-
-### 🧠 Memory & Knowledge
-| Server | What it connects |
-|---|---|
-| `memory` | Persistent knowledge graph |
-| `qdrant` | Vector search |
-| `chroma` | Local embeddings store |
-
-## 🛠️ Write your own (10 lines)
-
-```python
-# python-sdk example
-from mcp.server.fastmcp import FastMCP
-mcp = FastMCP("my-server")
-
-@mcp.tool()
-def hello(name: str) -> str:
-    return f"Hello {name}"
-
-mcp.run()
-```
-
-Register in Claude Desktop: `claude_desktop_config.json` → `mcpServers`.
-
-## 🔐 Security notes
-
-- MCP servers run **local code** — audit before installing
-- Prefer scoped filesystem access over `/`
-- Tool descriptions are prompt-injectable — treat server output as untrusted
+1.10 Интервью с клиентами — они уже платят за обход?
+2. Целевая страница + 200 $ объявлений - мера намерения регистрации
+3. Ручное начало: продавайте сервис, автоматизируйте за кулисами
 
 ---
 ## Участие
