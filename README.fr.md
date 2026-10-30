@@ -1,89 +1,71 @@
-# Awesome Mcp Servers
+# Ai Business Ideas
 
 [English](README.md) | **Français** | [Español](README.es.md) | [中文](README.zh-CN.md) | [日本語](README.ja.md) | [Русский](README.ru.md)
 
-Serveurs MCP — l'annuaire des outils Model Context Protocol
+100 idées de business IA réellement constructibles
 
-_Le contenu détaillé (listes, liens, descriptions) est en anglais pour rester maintenable — les sections ci-dessous te guident._
+## 100 idées d'IA constructibles — cueillis des points forts
 
-## 🔌 What is MCP?
+Micro-outils SaaS
+- révision de contrat AI pour les indépendants
+- Notes de réunion → entrées CRM structurées
+- Reddit/Twitter écoutant → hebdomadaire fondateur digest
+- Vérification d'accessibilité AI pour les sites Web
+- Niche RAG: "ChatGPT pour {industrie} docs"
+- Rédacteur de listes immobilières de photos
+- Triage support-ticket + auto-réponses
+- Extraction de factures → exportations comptables
+- Récapitulation de l'IA par poste
+- Traducteur de code historique (COBOL→moderne, 90s PHP→Laravel...)
 
-**Model Context Protocol** (Anthropic, open standard) — the USB-C of AI tooling: one protocol that lets any LLM client talk to any tool/data source. A MCP server exposes **tools**, **resources**, and **prompts**; the client (Claude Desktop, Cursor, your agent) calls them.
+Jeux verticaux
+- Clinique dentaire / vétérinaire: réceptionniste AI + triage
+- Métiers (bois, électriciens): citation-de-photo
+- Restaurants : moteur de menus allergènes-aware + multilingue
+- Gouvernement local : questions-réponses en format PDF officiel
+- Logistique : automatisation des travaux douaniers
+- Legal: assemblée de documents propre à chaque juridiction
 
-## 📂 Server directory
+Outils Dev
+- Générateur de changelog AI à partir de RP fusionnés
+- Générateur de données d'essai préservant le schéma+stats
+- L'examinateur des relations publiques est sur le guide de style de l'équipe
+- Bot embarqué formé sur le repo + wiki
+- Infra: réduction du bruit d'alerte anomalie
 
-### 🗄️ Data & Databases
-| Server | What it connects |
+Contenu
+- Newsletter-in-a-box (curation + brouillon + vérification du référencement)
+- Podcast → tous formats (clips, transcription, blog, tweets)
+- Docs multilingues gardant les traductions synchronisées
+- Contenu du référencement pour les pages programmatiques à longue distance
+
+### Niche & fun
+- Campagne de D&D co-DM avec mémoire
+- Entraîneur financier personnel pour les exportations bancaires (local-premier!)
+- Détecteur de maladies végétales à partir de photos
+- Recherche de deuxième cerveau sur *votre* messages/fichiers (privés)
+
+Le modèle qui fonctionne
+1. Choisissez une niche que vous pouvez atteindre
+2. Une tâche douloureuse et répétitive
+3. L'IA fait 80%, l'humain approuve 20%
+4. Charge pour le workflow, pas les jetons
+
+Nèches à demande éprouvée
+
+Modèle
 |---|---|
-| `postgres` | Query + inspect PostgreSQL |
-| `sqlite` | Local SQLite access |
-| `redis` | Key-value ops |
-| `clickhouse` | Analytics queries |
-| `snowflake` | Warehouse queries |
+Assistante verticale de l'IA (juridique, dentaire, métiers)
+pipeline de contenu AI pour les agences
+RAG sur les documents de l'entreprise
+Réceptionniste/agent téléphonique d'IA Prix par minute
+Service de réglage fin de la niche Frais de projet
 
-### 🌐 Web & Browsing
-| Server | What it connects |
-|---|---|
-| `playwright` | Full browser control |
-| `puppeteer` | Headless browser |
-| `fetch` | HTTP requests |
-| `brave-search` | Web search |
-| `firecrawl` | Scrape → clean markdown |
+Validation avant construction
 
-### 🗂️ Files & System
-| Server | What it connects |
-|---|---|
-| `filesystem` | Scoped file access |
-| `git` | Repo operations |
-| `shell` | Command execution (careful!) |
-| `docker` | Container management |
-
-### 🧰 Dev Platforms
-| Server | What it connects |
-|---|---|
-| `github` | Issues, PRs, repos |
-| `gitlab` | Same for GitLab |
-| `linear` | Issue tracking |
-| `sentry` | Error monitoring |
-| `aws` | Cloud resources |
-
-### 📅 Productivity
-| Server | What it connects |
-|---|---|
-| `slack` | Messages, channels |
-| `notion` | Docs & databases |
-| `google-drive` | Files |
-| `google-calendar` | Events |
-| `todoist` | Tasks |
-
-### 🧠 Memory & Knowledge
-| Server | What it connects |
-|---|---|
-| `memory` | Persistent knowledge graph |
-| `qdrant` | Vector search |
-| `chroma` | Local embeddings store |
-
-## 🛠️ Write your own (10 lines)
-
-```python
-# python-sdk example
-from mcp.server.fastmcp import FastMCP
-mcp = FastMCP("my-server")
-
-@mcp.tool()
-def hello(name: str) -> str:
-    return f"Hello {name}"
-
-mcp.run()
-```
-
-Register in Claude Desktop: `claude_desktop_config.json` → `mcpServers`.
-
-## 🔐 Security notes
-
-- MCP servers run **local code** — audit before installing
-- Prefer scoped filesystem access over `/`
-- Tool descriptions are prompt-injectable — treat server output as untrusted
+1. 10 entretiens avec des clients — sont-ils déjà payés pour une solution de rechange?
+2. Page d'atterrissage + 200 $ annonces – intention d'inscription de mesure
+3. Manuel-premier: vendre le service, automatiser dans les coulisses
 
 ---
 ## Contribuer
