@@ -1,89 +1,71 @@
-# Awesome Mcp Servers
+# Ai Business Ideas
 
 [English](README.md) | [Français](README.fr.md) | [Español](README.es.md) | **中文** | [日本語](README.ja.md) | [Русский](README.ru.md)
 
-MCP 服务器目录
+100 个可落地的 AI 商业点子
 
-_详细内容（列表、链接、描述）以英文维护 — 以下章节为你指引。_
+#####100可建构的AI创意——选取亮点.
 
-## 🔌 What is MCP?
+SaaS 微型工具
+- 自由职业者的AI合同审查员
+- 会议记录 —— 结构化客户关系管理条目
+每周创始人摘要
+- 网站的人工智能无障碍查询器
+- Niche RAG:“{工业}文件的ChatGPT”
+- 照片上的房地产上市作家
+- 支持脚本分类+自动复制草稿
+- 发票提取——会计出口
+- AI动力恢复每个职位的裁缝
+- 遗留编码翻译(COBOL 现代,90s PHP Laravel...)
 
-**Model Context Protocol** (Anthropic, open standard) — the USB-C of AI tooling: one protocol that lets any LLM client talk to any tool/data source. A MCP server exposes **tools**, **resources**, and **prompts**; the client (Claude Desktop, Cursor, your agent) calls them.
+垂直游戏
+- 牙科/蔬菜诊所:AI接待员+分科
+- 行业(木材、电工):引文-照片
+- 餐厅:超敏觉菜单引擎+多语种
+- 地方政府:公民-博士+官方PDF
+- 后勤:海关-纸张自动化
+- 法律:具体管辖的文件汇编
 
-## 📂 Server directory
+减法工具
+- 合并公关的AI更改日志生成器
+- 测试数据生成器,保存计划+数据
+- 公关审查员 调用团队的风格指南
+- 船上的机器人在repo + wiki上训练
+- 下文:异常-觉醒警报噪音减少
 
-### 🗄️ Data & Databases
-| Server | What it connects |
+内容
+- 装箱通讯(校准+草稿+标准工作机会检查)
+- Podcast – 各种格式(clip, text, blog, tweets)
+- 多语种文件保持翻译同步
+- 供长尾程序页使用的最低限度业务标准内容
+
+# # 乐趣 # # Niche & fun #
+- 带有内存的D&D活动联合DM
+- 银行出口的个人金融教练(当地第一!)
+- 照片上的植物疾病探测器
+- 第二天才搜索 *你的*消息/文件(私人)
+
+□ □ □ 工作模式
+1. 选择一个可以达到的空间
+2. 一个痛苦的重复任务
+3. 人工智能有80%,人类批准20%
+4. 工作流程收费,而不是代币
+
+∮######################################################################################### ######################################################################################################################################################################
+
+想法 模组
 |---|---|
-| `postgres` | Query + inspect PostgreSQL |
-| `sqlite` | Local SQLite access |
-| `redis` | Key-value ops |
-| `clickhouse` | Analytics queries |
-| `snowflake` | Warehouse queries |
+纵向人工智能助理(法律、牙科、行业)
+机构AI内容管道
+执行项目
+AI接待员/电话代理员 每分钟定价
+项目费
 
-### 🌐 Web & Browsing
-| Server | What it connects |
-|---|---|
-| `playwright` | Full browser control |
-| `puppeteer` | Headless browser |
-| `fetch` | HTTP requests |
-| `brave-search` | Web search |
-| `firecrawl` | Scrape → clean markdown |
+□□□□□□□ 建造前验证
 
-### 🗂️ Files & System
-| Server | What it connects |
-|---|---|
-| `filesystem` | Scoped file access |
-| `git` | Repo operations |
-| `shell` | Command execution (careful!) |
-| `docker` | Container management |
-
-### 🧰 Dev Platforms
-| Server | What it connects |
-|---|---|
-| `github` | Issues, PRs, repos |
-| `gitlab` | Same for GitLab |
-| `linear` | Issue tracking |
-| `sentry` | Error monitoring |
-| `aws` | Cloud resources |
-
-### 📅 Productivity
-| Server | What it connects |
-|---|---|
-| `slack` | Messages, channels |
-| `notion` | Docs & databases |
-| `google-drive` | Files |
-| `google-calendar` | Events |
-| `todoist` | Tasks |
-
-### 🧠 Memory & Knowledge
-| Server | What it connects |
-|---|---|
-| `memory` | Persistent knowledge graph |
-| `qdrant` | Vector search |
-| `chroma` | Local embeddings store |
-
-## 🛠️ Write your own (10 lines)
-
-```python
-# python-sdk example
-from mcp.server.fastmcp import FastMCP
-mcp = FastMCP("my-server")
-
-@mcp.tool()
-def hello(name: str) -> str:
-    return f"Hello {name}"
-
-mcp.run()
-```
-
-Register in Claude Desktop: `claude_desktop_config.json` → `mcpServers`.
-
-## 🔐 Security notes
-
-- MCP servers run **local code** — audit before installing
-- Prefer scoped filesystem access over `/`
-- Tool descriptions are prompt-injectable — treat server output as untrusted
+1. 10次客户访谈——他们是否已经支付工作费用?
+2. 登陆页+200个广告——计量报名意向
+3. 人工第一:出售服务,在幕后自动化
 
 ---
 ## 贡献
