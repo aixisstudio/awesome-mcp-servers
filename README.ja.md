@@ -1,89 +1,71 @@
-# Awesome Mcp Servers
+# Ai Business Ideas
 
 [English](README.md) | [Français](README.fr.md) | [Español](README.es.md) | [中文](README.zh-CN.md) | **日本語** | [Русский](README.ru.md)
 
-MCP サーバー一覧
+実際に作れる AI ビジネスアイデア100
 
-_詳細なコンテンツ（リスト・リンク・説明）は保守のため英語です。以下のセクションがガイドになります。_
+## 100 ビルド可能な AI アイデア — ピックアップされたハイライト
 
-## 🔌 What is MCP?
+##SaaSマイクロツール
+- フリーランサーのためのAI契約審査者
+- 会議ノート → 構造化されたCRMエントリ
+- Reddit/Twitterリスニング → 週刊創始者ダイジェスト
+- ウェブサイトのAIアクセシビリティチェッカー
+- Niche RAG: "{industry} docsのチャットGPT"
+- 写真から不動産リストライター
+- サポート チケットのtriage +自動返信の草案
+- 請求書抽出 → 会計輸出
+- ジョブ投稿ごとのAI搭載履歴書
+- レガシーコード翻訳者(COBOL→modern、90s PHP→Laravel...)
 
-**Model Context Protocol** (Anthropic, open standard) — the USB-C of AI tooling: one protocol that lets any LLM client talk to any tool/data source. A MCP server exposes **tools**, **resources**, and **prompts**; the client (Claude Desktop, Cursor, your agent) calls them.
+## 垂直プレイ
+- デンタル/ベッドクリニック:AI受付+トライエイジ
+- 貿易(木材、電気技師):引用から写真
+- レストラン:アレルゲンアウェアメニューエンジン+多言語
+- ローカルgov:市民文書Q&Aは、公式PDF上で
+- 物流:通関手続き自動化
+- 法的: 管轄区域固有の文書アセンブリ
 
-## 📂 Server directory
+##Dev ツール
+- 合併PRからAI変更ログジェネレーター
+- スキーマ+スタットを予約するテストデータジェネレーター
+- チームスタイルのガイドで調整されたPRレビュー担当者
+- repo + wiki で訓練されたボットをオンボーディング
+- 赤外線:異常警報減少
 
-### 🗄️ Data & Databases
-| Server | What it connects |
+### コンテンツ
+- ニュースレターインボックス(キュレーション+ドラフト+SEOチェック)
+- Podcast → すべてのフォーマット(クリップ、トランスクリプト、ブログ、ツイート)
+- 翻訳を同期に保つ多言語ドキュメント
+- ロングテールプログラマティックページのためのSEOコンテンツ
+
+##ニッチ&楽しい
+- D&Dキャンペーンの共同DMとメモリ
+- 銀行輸出の個人財務コーチ(ローカルファースト!)
+- 写真から植物病の探知器
+- *your*メッセージ/ファイル(プライベート)上の秒単位検索
+
+## ⚡ 作品のパターン
+1. 到達できるニッチを選ぶ
+2. 1つの痛みを伴う反復タスク
+3. AIは80%、人間は20%を承認します
+4. トークンではなく、ワークフローに課金する
+
+証明された要求の##の袋のニッチ
+
+| アイデア | モデル |
 |---|---|
-| `postgres` | Query + inspect PostgreSQL |
-| `sqlite` | Local SQLite access |
-| `redis` | Key-value ops |
-| `clickhouse` | Analytics queries |
-| `snowflake` | Warehouse queries |
+| 縦型AIアシスタント(リーガル・デンタル・トレード) | SaaS $50-200/mo |
+| エージェンシー向けAIコンテンツパイプライン | 保持者 |
+| RAG 社内文書 | 導入事例 |
+| AI受付・電話代行 | 最低価格 |
+| ニッチ微調整サービス | プロジェクト料金 |
 
-### 🌐 Web & Browsing
-| Server | What it connects |
-|---|---|
-| `playwright` | Full browser control |
-| `puppeteer` | Headless browser |
-| `fetch` | HTTP requests |
-| `brave-search` | Web search |
-| `firecrawl` | Scrape → clean markdown |
+## ビルド前の検証
 
-### 🗂️ Files & System
-| Server | What it connects |
-|---|---|
-| `filesystem` | Scoped file access |
-| `git` | Repo operations |
-| `shell` | Command execution (careful!) |
-| `docker` | Container management |
-
-### 🧰 Dev Platforms
-| Server | What it connects |
-|---|---|
-| `github` | Issues, PRs, repos |
-| `gitlab` | Same for GitLab |
-| `linear` | Issue tracking |
-| `sentry` | Error monitoring |
-| `aws` | Cloud resources |
-
-### 📅 Productivity
-| Server | What it connects |
-|---|---|
-| `slack` | Messages, channels |
-| `notion` | Docs & databases |
-| `google-drive` | Files |
-| `google-calendar` | Events |
-| `todoist` | Tasks |
-
-### 🧠 Memory & Knowledge
-| Server | What it connects |
-|---|---|
-| `memory` | Persistent knowledge graph |
-| `qdrant` | Vector search |
-| `chroma` | Local embeddings store |
-
-## 🛠️ Write your own (10 lines)
-
-```python
-# python-sdk example
-from mcp.server.fastmcp import FastMCP
-mcp = FastMCP("my-server")
-
-@mcp.tool()
-def hello(name: str) -> str:
-    return f"Hello {name}"
-
-mcp.run()
-```
-
-Register in Claude Desktop: `claude_desktop_config.json` → `mcpServers`.
-
-## 🔐 Security notes
-
-- MCP servers run **local code** — audit before installing
-- Prefer scoped filesystem access over `/`
-- Tool descriptions are prompt-injectable — treat server output as untrusted
+1。 10の顧客インタビュー — 彼らは*すでに*仕事のために支払うのですか?
+2.ランディングページ + $ 200広告 — サインアップインテントを測定
+3. 手動優先:サービスを販売し、場面の後ろを自動化して下さい
 
 ---
 ## 貢献
