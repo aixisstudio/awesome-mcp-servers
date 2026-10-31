@@ -22,6 +22,7 @@ Model Context Protocol servers — the directory of MCP tools for AI agents
 ### 🌐 Web & Browsing
 | Server | What it connects |
 |---|---|
+| [agent-qa](https://vostride.com) | Web/mobile testing with memidex memory and validated self-improvement |
 | `playwright` | Full browser control |
 | `puppeteer` | Headless browser |
 | `fetch` | HTTP requests |
