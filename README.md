@@ -28,6 +28,12 @@ Model Context Protocol servers — the directory of MCP tools for AI agents
 | `brave-search` | Web search |
 | `firecrawl` | Scrape → clean markdown |
 
+
+### 💼 Hiring & Jobs
+| Server | What it connects |
+|---|---|
+| [`JobsPipe`](https://docs.jobspipe.dev/ai-agents/mcp) | Remote MCP — search ATS-normalized job listings (`https://mcp.jobspipe.dev/mcp`) |
+
 ### 🗂️ Files & System
 | Server | What it connects |
 |---|---|
